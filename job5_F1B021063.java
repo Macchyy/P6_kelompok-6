@@ -1,74 +1,40 @@
 package p6;
 
-abstract class Pulau { 
- static final String NEGARA = "Indonesia"; 
- public abstract String nama(); 
- public String ambilNegara(){ 
- return NEGARA; 
- } 
-} 
-class Jawa extends Pulau { 
- String namap; 
- public String nama(){ 
- namap = "Pulau Jawa"; 
- return namap; 
- } 
-} 
-class Kalimantan extends Pulau { 
- String namap; 
- public String nama(){ 
- namap = "Pulau Kalimantan"; 
- return namap; 
- } 
-} 
-class NTB extends Pulau { 
- String namap; 
- public String nama(){ 
- namap = "Pulau NTB"; 
- return namap; 
- } 
-} 
+public class job9{ 
+ job9(){ 
+ System.out.println("Constructor of Parent"); 
 
-class JawaBarat extends Jawa { 
- void namaProv(){ 
- System.out.println("Ini Pulau Berada di "+ 
-ambilNegara()); 
-
- System.out.println("Ini "+ nama()); 
- System.out.println("Ini Provinsi Jawa Barat"); 
- System.out.println("Jumlah Penduduk : 232342 Jiwa"); 
- } 
-} 
-class KalimantanTimur extends Kalimantan { 
- void namaProv(){ 
- System.out.println("Ini Pulau Berada di "+ 
-ambilNegara()); 
- System.out.println("Ini "+ nama()); 
- System.out.println("Ini Provinsi Kalimantan Timur"); 
- System.out.println("Jumlah Penduduk : 32421 Jiwa"); 
- } 
-} 
-class Lombok extends NTB { 
- void namaProv(){ 
- System.out.println("Ini Pulau Berada di "+ 
-ambilNegara()); 
-
- System.out.println("Ini "+ nama()); 
- System.out.println("Ini Provinsi Mataram"); 
- System.out.println("Jumlah Penduduk : 2333899 Jiwa"); 
  } 
 }
+package p6;
+
+class job9b extends job9{ 
+ job9b(){ 
+ System.out.println("Constructor of Child"); 
+ } 
+ public static void main(String args[]){ 
  
-public class job5 { 
- public static void main (String [] args){ 
- JawaBarat JB = new JawaBarat(); 
- KalimantanTimur KT = new KalimantanTimur(); 
- Lombok LB = new Lombok();
- JB.namaProv(); 
- System.out.println(""); 
- KT.namaProv(); 
- System.out.println(""); 
- LB.namaProv();
+ new job9b(); 
  } 
 }
 
+class job9c extends job9{ 
+ job9c(){ 
+ System.out.println("Constructor of Child A"); 
+ } 
+ public static void main(String args[]){ 
+ 
+ new job9c(); 
+ } 
+}
+package p6;
+
+class job9d extends job9{ 
+ job9d(){ 
+ System.out.println("Constructor of Child B"); 
+ } 
+ public static void main(String args[]){ 
+ 
+ new job9d(); 
+ } 
+}
